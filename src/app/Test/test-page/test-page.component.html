@@ -1,0 +1,26 @@
+//Track By
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let movie of movies; trackBy: refreshMovies">
+            <td>
+                {{movie.id}}
+            </td>
+            <td>
+                {{movie.name}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="button" (click)="reset()"> Reset</button>
+
+<button class="button" (click)="refreshData()"> Refresh</button>
+
+

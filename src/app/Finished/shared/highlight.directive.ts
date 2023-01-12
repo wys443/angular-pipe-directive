@@ -6,6 +6,8 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 export class HighlightDirective {
 
   constructor(private el: ElementRef) {
+    this.el.nativeElement.innerText = "Unit1: "
+    this.el.nativeElement.innerHTML = "<div> Unit1: Hello World </div>"
     this.el.nativeElement.style.color = "red";
   }
 
